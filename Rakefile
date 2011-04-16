@@ -6,7 +6,7 @@ task :install do
     link, source = cygpath("$HOME"), cygpath("$PWD")
     sh "junction -s '#{link}\\.oh-my-zsh' '#{source}'"
   else
-    `ln -s . ~/.oh-my-zsh`
+    sh "ln -s $PWD ~/.oh-my-zsh"
   end
 
 end
