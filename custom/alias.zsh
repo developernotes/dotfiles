@@ -1,2 +1,2 @@
 
-alias e='~/eopen.sh'
+alias e='~/dotfiles/eopen.sh'
