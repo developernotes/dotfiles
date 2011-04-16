@@ -13,6 +13,9 @@ case `uname` in
         # rvm
         [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
         ;;
+    CYGWIN_NT-6.0)
+        export JAVA_HOME=/cygdrive/c/Program\ Files/Java/jdk1.6.0_24
+        ;;
 esac
 
 # java
