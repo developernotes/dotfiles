@@ -5,7 +5,7 @@ export PATH=~/bin/darcs:$PATH
 export PATH=~/bin/scripts:$PATH
 
 # git
-export GIT_EDITOR="~/dotfiles/eopen.sh"
+export GIT_EDITOR="$ZSH/custom/eopen.sh"
 
 case `uname` in
     Darwin)
