@@ -1,8 +1,7 @@
 
 case `uname` in
-    CYGWIN_NT-6.0)
+    CYGWIN*)
         alias open='explorer'
+        alias e="`cygpath -m $ZSH`/custom/eopen.sh"
         ;;
 esac
-alias e='$ZSH/custom/eopen.sh'
-
