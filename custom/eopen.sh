@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [[ "${1}" == "" ]]; then
-    emacsclient -c
+    emacsclient -t
 else
     emacsclient "${1}" \
         2> /dev/null
