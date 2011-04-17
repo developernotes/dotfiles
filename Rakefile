@@ -3,8 +3,8 @@ desc "install zsh configuration"
 task :install do
   sh "cp templates/zshrc.zsh-template ~/.zshrc"
   if RUBY_PLATFORM.include?("cygwin") || RUBY_PLATFORM.include?("mingw")
-    link, source = cygpath("$HOME"), cygpath("$PWD")
-    sh "junction -s '#{link}\\.oh-my-zsh' '#{source}'"
+    home, dotfiles_root = cygpath("$HOME"), cygpath("$PWD")
+    sh "junction -s '#{home}\\.oh-my-zsh' '#{dotfiles_root}'"
   else
     sh "ln -s $PWD ~/.oh-my-zsh"
   end
