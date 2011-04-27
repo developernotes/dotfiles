@@ -17,6 +17,7 @@ case `uname` in
         export JAVA_HOME=/cygdrive/c/Program\ Files/Java/jdk1.6.0_24
         export PATH=/cygdrive/c/Program\ Files/MySQL/MySQL\ Server\ 5.1/bin:$PATH
         export PATH=/cygdrive/c/Eclipse/plugins/net.rim.ejde/vmTools:$PATH
+        export TERM=cygwin
         ;;
 esac
 
