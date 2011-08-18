@@ -1,6 +1,7 @@
 
 export CDPATH=~/code
 
+export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
 
 case `uname` in
