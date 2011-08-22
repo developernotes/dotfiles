@@ -1,5 +1,5 @@
 
-export CDPATH=~/code
+#export CDPATH=~/code
 
 export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
@@ -38,4 +38,5 @@ export PATH=~/bin/leiningen/bin:$PATH
 export PATH=~/bin/android-sdk/tools:$PATH
 export PATH=~/bin/android-sdk/platform-tools:$PATH
 export ANDROID_HOME=~/bin/android-sdk
-export PATH=~/bin/android-ndk:$PATH
+export ANDROID_NDK_ROOT=~/bin/android-ndk
+export PATH=$ANDROID_NDK_ROOT:$PATH
