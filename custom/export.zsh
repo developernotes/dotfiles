@@ -1,11 +1,10 @@
 
-#export CDPATH=~/code
-
 export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
 
 case `uname` in
     Darwin)
+        export PATH=~/bin:$PATH
         export PATH=~/bin/dex2jar:$PATH
         export JAVA_HOME=$(/usr/libexec/java_home)
         export GIT_EDITOR="$ZSH/custom/eopen.sh"
