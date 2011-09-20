@@ -8,3 +8,5 @@ case `uname` in
         alias e="`cygpath -m $ZSH`/custom/eopen.sh"
         ;;
 esac
+
+alias lein='nocorrect lein'
