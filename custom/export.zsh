@@ -1,4 +1,5 @@
 
+export DISABLE_AUTO_UPDATE=false
 export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
 
