@@ -3,7 +3,7 @@
 if [[ "${1}" == "" ]]; then
     emacsclient -t
 else
-    emacsclient "${1}" \
+    emacsclient -nw "${1}" \
         2> /dev/null
 fi
 

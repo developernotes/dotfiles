@@ -1,10 +1,13 @@
 
-export CDPATH=~/code
-
+export DISABLE_AUTO_UPDATE=false
+export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
 
 case `uname` in
     Darwin)
+        export PATH=~/bin:$PATH
+        export PATH=~/bin/dex2jar:$PATH
+        export PATH=/Applications/kdiff3.app/Contents/MacOS:$PATH
         export JAVA_HOME=$(/usr/libexec/java_home)
         export GIT_EDITOR="$ZSH/custom/eopen.sh"
         [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -36,3 +39,6 @@ export PATH=~/bin/leiningen/bin:$PATH
 export PATH=~/bin/android-sdk/tools:$PATH
 export PATH=~/bin/android-sdk/platform-tools:$PATH
 export ANDROID_HOME=~/bin/android-sdk
+export ANDROID_NDK_ROOT=~/bin/android-ndk
+export PATH=$ANDROID_NDK_ROOT:$PATH
+
