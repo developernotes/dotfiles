@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if [[ "${1}" == "" ]]; then
     emacsclient -t
