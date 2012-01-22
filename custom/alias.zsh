@@ -1,6 +1,6 @@
 
 case `uname` in
-    Darwin)
+    Darwin|Linux)
         alias e="$ZSH/custom/eopen.sh"
         ;;
     CYGWIN*)
@@ -10,3 +10,4 @@ case `uname` in
 esac
 
 alias lein='nocorrect lein'
+alias java='nocorrect java'
