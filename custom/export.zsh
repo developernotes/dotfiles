@@ -1,11 +1,12 @@
 
-export DISABLE_AUTO_UPDATE=false
 export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
+export PATH=~/bin:$PATH
+
+export CDPATH=~/code
 
 case `uname` in
     Darwin)
-        export PATH=~/bin:$PATH
         export PATH=~/bin/dex2jar:$PATH
         export PATH=/Applications/kdiff3.app/Contents/MacOS:$PATH
         export JAVA_HOME=$(/usr/libexec/java_home)
@@ -20,6 +21,8 @@ case `uname` in
         export JAVA_HOME=/cygdrive/c/Program\ Files/Java/jdk1.6.0_24
         export PATH=/cygdrive/c/Program\ Files/MySQL/MySQL\ Server\ 5.1/bin:$PATH
         export PATH=/cygdrive/c/Eclipse/plugins/net.rim.ejde/vmTools:$PATH
+        export PATH=/cygdrive/c/Program\ Files\ \(x86\)/KDiff3:$PATH
+        export PATH=/cygdrive/c/Program\ Files\ \(x86\)/nodejs:$PATH
         export TERM=cygwin
         ;;
 esac
@@ -34,6 +37,7 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 # clojure
 export PATH=~/bin/leiningen/bin:$PATH
+export PATH=~/.lein/bin:$PATH
 
 # android
 export PATH=~/bin/android-sdk/tools:$PATH
