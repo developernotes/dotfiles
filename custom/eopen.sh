@@ -1,13 +1,20 @@
-#!/bin/sh
+#!/bin/zsh
+
+CLIENT=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient
+EMACS=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs
 
 if [[ "${1}" == "" ]]; then
-    emacsclient -t
+    ${CLIENT} --tty 2> /dev/null
 else
-    emacsclient -nw "${1}" \
+    ${CLIENT} -nw "${1}" \
         2> /dev/null
 fi
 
 if [ $? -ne 0 ]; then
-    emacs --daemon
-    emacsclient "${1}"
+    ${EMACS} --daemon
+    if [[ "${1}" == "" ]]; then
+        ${CLIENT} --tty
+    else
+        ${CLIENT} --tty "${1}"
+    fi
 fi

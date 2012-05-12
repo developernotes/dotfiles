@@ -1,0 +1,10 @@
+** Installation
+
+Initial installation:
+
+Requires =Make= and =zsh= to be installed on the target platform.  Window installation also requires the [[http://technet.microsoft.com/en-us/sysinternals/bb896768][Junction]] utility for symbolic links.
+
+:  $ git clone git://github.com/developernotes/dotfiles.git
+:  $ cd dotfiles
+:  $ make install
+:  $ chsh -s /usr/bin/zsh
