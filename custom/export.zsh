@@ -1,6 +1,8 @@
 
 export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
+export DISABLE_AUTO_UPDATE=true
+export EDITOR="$ZSH/custom/eopen.sh"
 
 case `uname` in
     Darwin)
@@ -8,6 +10,7 @@ case `uname` in
         export PATH=~/bin/dex2jar:$PATH
         export PATH=/Applications/kdiff3.app/Contents/MacOS:$PATH
         export JAVA_HOME=$(/usr/libexec/java_home)
+        export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
         export GIT_EDITOR="$ZSH/custom/eopen.sh"
         [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
         ;;
@@ -33,11 +36,11 @@ export PATH=${JAVA_HOME}/bin:$PATH
 
 # clojure
 export PATH=~/bin/leiningen/bin:$PATH
+export PATH=~/.lein/bin:$PATH
 
 # android
 export PATH=~/bin/android-sdk/tools:$PATH
 export PATH=~/bin/android-sdk/platform-tools:$PATH
 export ANDROID_HOME=~/bin/android-sdk
-export ANDROID_NDK_ROOT=~/bin/android-ndk
+export ANDROID_NDK_ROOT=~/bin/android-ndk-r7
 export PATH=$ANDROID_NDK_ROOT:$PATH
-
