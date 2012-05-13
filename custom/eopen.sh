@@ -1,7 +1,15 @@
 #!/bin/zsh
 
-CLIENT=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient
-EMACS=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs
+case `uname` in
+    Darwin)
+        CLIENT=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient
+        EMACS=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs
+        ;;
+    CYGWIN*)
+        CLIENT=emacsclient
+        EMACS=emacs
+        ;;
+esac
 
 if [[ "${1}" == "" ]]; then
     ${CLIENT} --tty 2> /dev/null
