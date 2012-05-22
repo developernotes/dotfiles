@@ -2,7 +2,7 @@
 export PATH=/usr/local/bin:/usr/bin:$PATH
 export PATH=~/bin/scripts:$PATH
 export PATH=~/bin:$PATH
-export CDPATH=~/code
+export CDPATH=$CDPATH:~/code
 
 export EDITOR="$ZSH/custom/eopen.sh"
 
